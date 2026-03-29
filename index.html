@@ -596,6 +596,10 @@
 
      /* Services Section */
 
+     html {
+         scroll-behavior: smooth;
+     }
+
      .services {
          text-align: center;
          padding: 60px 20px;
@@ -643,6 +647,30 @@
          line-height: 1.5;
      }
 
+
+     .card:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 0 20px rgba(138, 108, 255, 0.5);
+     }
+
+
+     /* Tablet */
+
+     @media (max-width: 992px) {
+         .card-container {
+             grid-template-columns: repeat(2, 1fr);
+         }
+     }
+
+
+     /* Mobile */
+
+     @media (max-width: 768px) {
+         .card-container {
+             grid-template-columns: 1fr;
+         }
+
+     }
 
 
 
@@ -761,7 +789,9 @@
 
 </section>
 
-<section class="services">
+<!-- Service Section -->
+
+<section id="services" class="services">
     <p class="sub-title">SERVICES</p>
     <h2 class="main-title">My Specialties</h2>
 
