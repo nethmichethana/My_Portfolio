@@ -972,6 +972,25 @@
          box-shadow: 0 0 25px rgba(138, 108, 255, 0.6);
      }
 
+     /* Tablet Mode*/
+     @media (max-width: 992px) {
+         .projects-container {
+             gap: 25px;
+         }
+     }
+
+     /* Mobile mode */
+     @media (max-width: 768px) {
+         .projects-container {
+             flex-direction: column;
+             align-items: center;
+         }
+
+         .project-card {
+             width: 90%;
+         }
+     }
+
  </style>
 
 </head>
@@ -1186,7 +1205,7 @@
         <div class="project-card">
             <img src="assets/restaurantimg.jpg" alt="Restaurant System">
             <div class="project-content">
-                <h3>Restaurant Management System</h3>
+                <h3>Restaurant  System</h3>
                 <div class="arrow">↗</div>
             </div>
         </div>
