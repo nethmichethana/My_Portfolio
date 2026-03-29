@@ -875,7 +875,102 @@
 
      }
 
+     /* PROJECTS SECTION */
 
+
+     .projects {
+         text-align: center;
+         padding: 80px 50px;
+         background: rgba(255,255,255,0.05);
+         backdrop-filter: blur(20px);
+         border-radius: 30px;
+         margin: 50px;
+         color: #fff;
+
+         /*background: linear-gradient(135deg, #2b1d4a, #1a1230);*/
+         /*position: relative;*/
+         /*overflow: hidden;*/
+     }
+
+     /* vertical blur lines */
+     .projects::before {
+         content: "";
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         /*background: repeating-linear-gradient(*/
+         /*        to right,*/
+         /*        rgba(255,255,255,0.05) 0px,*/
+         /*        rgba(255,255,255,0.05) 2px,*/
+         /*        transparent 2px,*/
+         /*        transparent 40px*/
+         /*);*/
+         top: 0;
+         left: 0;
+     }
+
+     /* container */
+     .projects-container {
+         display: flex;
+         justify-content: center;
+         gap: 150px;
+         flex-wrap: wrap;
+         margin-top: 50px;
+     }
+
+     /* card */
+     .project-card {
+         width: 280px;
+         border-radius: 20px;
+         overflow: hidden;
+         position: relative;
+
+         background: rgba(255, 255, 255, 0.08);
+         backdrop-filter: blur(12px);
+
+         transition: 0.3s;
+     }
+
+     /* image */
+     .project-card img {
+         width: 100%;
+         height: 180px;
+         object-fit: cover;
+     }
+
+     /* content */
+     .project-content {
+         padding: 20px;
+         position: relative;
+     }
+
+     .project-content h3 {
+         font-size: 20px;
+         text-align: left;
+     }
+
+     /* arrow button */
+     .arrow {
+         position: absolute;
+         right: 20px;
+         bottom: 20px;
+
+         width: 35px;
+         height: 35px;
+         border-radius: 50%;
+         background: #fff;
+         color: #000;
+
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+
+     /* hover effect */
+     .project-card:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 0 25px rgba(138, 108, 255, 0.6);
+     }
 
  </style>
 
