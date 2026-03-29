@@ -24,6 +24,8 @@
          color: #fff;
      }
 
+
+
      /* Nav Bar */
 
      .navbar {
@@ -290,14 +292,12 @@
          }
      }
 
-     /* MAIN SECTION */
-
      html {
          scroll-behavior: smooth;
      }
 
 
-     /* LEFT IMAGE */
+     /* Left Image */
      .about-left img {
          width: 250px;
          height: 250px;
@@ -877,6 +877,9 @@
 
      /* PROJECTS SECTION */
 
+     .sub-title{
+         font-size: 20px;
+     }
 
      .projects {
          text-align: center;
@@ -891,6 +894,7 @@
          /*position: relative;*/
          /*overflow: hidden;*/
      }
+
 
      /* vertical blur lines */
      .projects::before {
@@ -990,6 +994,9 @@
              width: 90%;
          }
      }
+     html {
+         scroll-behavior: smooth;
+     }
 
  </style>
 
@@ -1011,7 +1018,7 @@
         <a href="#" class="active">HOME</a>
         <a href="#about">ABOUT</a>
         <a href="#services">SERVICES</a>
-        <a href="#">PROJECTS</a>
+        <a href="#projects">Projects</a>
     </div>
 
     <a href="#" class="hire-btn">HIRE ME</a>
@@ -1188,8 +1195,10 @@
     </div>
 </section>
 
+<!-- Projects -->
+
 <section class="projects" id="projects">
-    <p class="sub-title">PORTFOLIO</p>
+    <p class="sub-title">PROJECTS</p>
     <h2 class="main-title">Projects That Reflect <br> My Expertise And Vision</h2>
 
     <div class="projects-container">
@@ -1209,8 +1218,32 @@
                 <div class="arrow">↗</div>
             </div>
         </div>
-
     </div>
 </section>
+
+<!-- Hire Me Section -->
+
+<section class="cta-section">
+    <div class="badge">✨ Available For Opportunities</div>
+
+    <h1 class="animated-text">
+        <span>Let’s Work Together</span>
+        <span>to transform your</span>
+        <span>ideas into stunning</span>
+        <span>designs.</span>
+    </h1>
+
+    <button class="hire-btn">Hire Me Now</button>
+
+    <div class="socials">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+</section>
+
+<!-- Font Awesome -->
+<script src="assets/lib/fontawesome/fontawesome-free/js"></script>
+
 </body>
 </html>
