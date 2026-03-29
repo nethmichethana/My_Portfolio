@@ -25,6 +25,7 @@
      }
 
      /* Nav Bar */
+
      .navbar {
          display: flex;
          justify-content: space-between;
@@ -37,6 +38,22 @@
          font-size: 22px;
          font-weight: 600;
          letter-spacing: 2px;
+     }
+     /* hide checkbox */
+     #menu-toggle {
+         display: none;
+     }
+
+     /* hamburger icon */
+     .menu-icon {
+         display: none;
+         font-size: 28px;
+         cursor: pointer;
+     }
+
+     .nav-links {
+         display: flex;
+         gap: 20px;
      }
 
 
@@ -136,7 +153,8 @@
      .hero-img {
          position: relative;
          animation: float 3s ease-in-out infinite;
-         transform: translateX(-350px);
+
+
      }
 
      .hero-img img {
@@ -153,44 +171,100 @@
      }
      @keyframes float {
          0% {
-             transform: translateX(-40px) translateY(0);
+             transform: translateX(-100px) translateY(0);
          }
          50% {
-             transform: translateX(-40px) translateY(-10px);
+             transform: translateX(-100px) translateY(-10px);
          }
          100% {
-             transform: translateX(-40px) translateY(0);
+             transform: translateX(-100px) translateY(0);
          }
      }
 
-     /* Tab */
+     .nav-links {
+         backdrop-filter: blur(10px);
+     }
+
+     /* Tablet mode*/
      @media (max-width: 992px) {
+
          .hero {
              flex-direction: column;
+             align-items: center;
              text-align: center;
          }
 
-         .hero-img {
-             margin-top: 30px;
+         .hero-text {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
          }
+
+         .buttons {
+             justify-content: center; /* buttons center */
+         }
+
+         .hero-img {
+
+             margin-top: 30px;
+             display: flex;
+             justify-content: center;
+         }
+
+         .hero-img img {
+             margin-left: 90px;
+             display: block;
+             /*margin: auto;*/
+         }
+
      }
 
-     /* Mobile */
-     @media (max-width: 600px) {
-         .navbar {
-             flex-direction: column;
-             gap: 15px;
+     /* MobileMode mode*/
+
+     @media (max-width: 768px) {
+
+         .menu-icon {
+             display: block;
+             margin-left: auto;
          }
 
          .nav-links {
-             flex-wrap: wrap;
-             justify-content: center;
+             position: fixed;
+             top: 0;
+             left: -100%;
+             width: 220px;
+             height: 100vh;
+             background: #1a0b3a;
+             flex-direction: column;
+             padding: 60px 20px;
+             transition: 0.3s;
+         }
+
+         .nav-links a {
+             display: block;
+             margin: 15px 0;
+         }
+
+         /* 🔥 KEY LINE */
+         #menu-toggle:checked ~ .nav-links {
+             left: 0;
+         }
+
+         .hire-btn {
+             display: none;
+         }
+
+         .hero {
+             flex-direction: column;
+             text-align: center;
+             padding: 40px 20px;
          }
 
          .hero h1 {
              font-size: 32px;
          }
      }
+
 
 
 
@@ -203,6 +277,12 @@
 <!-- Nav Bar -->
 <div class="navbar">
     <div class="logo">PORTFOLIO</div>
+
+    <input type="checkbox" id="menu-toggle">
+
+    <label for="menu-toggle" class="menu-icon">
+        ☰
+    </label>
 
     <div class="nav-links">
         <a href="#" class="active">HOME</a>
