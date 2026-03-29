@@ -768,6 +768,35 @@
                  0 0 20px #00e0ff,
                  0 0 40px rgba(0, 224, 255, 0.5);
      }
+
+     /*  Tablet Mode  */
+
+     @media (max-width: 992px) {
+         .tech-container {
+             grid-template-columns: repeat(3, 1fr); /* 3 columns */
+             gap: 20px;
+         }
+
+         .tech-card {
+             font-size: 15px;
+             padding: 20px 10px;
+         }
+     }
+
+     /*  Mobile Mode  */
+
+     @media (max-width: 768px) {
+         .tech-container {
+             grid-template-columns: repeat(2, 1fr); /* 2 columns */
+             gap: 15px;
+         }
+
+         .tech-card {
+             font-size: 14px;
+             padding: 18px 8px;
+         }
+     }
+
      /* SERVICES SECTION */
 
      html {
