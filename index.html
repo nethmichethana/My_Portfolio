@@ -594,6 +594,83 @@
 
      }
 
+     .education {
+         text-align: center;
+         padding: 60px 20px;
+         color: #fff;
+     }
+
+     /* Timeline Line */
+     .timeline {
+         position: relative;
+         max-width: 800px;
+         margin: 50px auto;
+     }
+
+     .timeline::before {
+         content: "";
+         position: absolute;
+         left: 50%;
+         width: 4px;
+         height: 100%;
+         background: #8a6cff;
+         transform: translateX(-50%);
+     }
+
+     /* Items */
+     .timeline-item {
+         position: relative;
+         width: 50%;
+         padding: 20px 40px;
+     }
+
+     /* Left side */
+     .timeline-item:nth-child(odd) {
+         left: 0;
+         text-align: right;
+     }
+
+     /* Right side */
+     .timeline-item:nth-child(even) {
+         left: 50%;
+     }
+
+     /* Content Box */
+     .content {
+         background: rgba(255, 255, 255, 0.08);
+         padding: 20px;
+         border-radius: 15px;
+         backdrop-filter: blur(10px);
+         position: relative;
+         transition: 0.3s;
+     }
+
+     .content:hover {
+         transform: scale(1.05);
+         box-shadow: 0 0 20px rgba(138, 108, 255, 0.5);
+     }
+
+     /* Circle Dots */
+     .timeline-item::before {
+         content: "";
+         position: absolute;
+         top: 30px;
+         width: 15px;
+         height: 15px;
+         background: #8a6cff;
+         border-radius: 50%;
+         z-index: 1;
+     }
+
+     /* Dot positions */
+     .timeline-item:nth-child(odd)::before {
+         right: -8px;
+     }
+
+     .timeline-item:nth-child(even)::before {
+         left: -8px;
+     }
+
      /* Services Section */
 
      html {
@@ -795,25 +872,33 @@
     <p class="sub-title">EDUCATION</p>
     <h2 class="main-title">My Education</h2>
 
-    <div class="edu-container">
-        <div class="edu-card">
-            <h3>🎓 G.C.E O/L</h3>
-            <p>Completed Ordinary Level Education</p>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="content">
+                <h3>🎓 G.C.E O/L</h3>
+                <p>Completed Ordinary Level Education</p>
+            </div>
         </div>
 
-        <div class="edu-card">
-            <h3>🎓 G.C.E A/L</h3>
-            <p>Completed Advanced Level Education</p>
+        <div class="timeline-item">
+            <div class="content">
+                <h3>🎓 G.C.E A/L</h3>
+                <p>Completed Advanced Level Education</p>
+            </div>
         </div>
 
-        <div class="edu-card">
-            <h3>📘 Diploma in English</h3>
-            <p>Successfully Completed English Diploma</p>
+        <div class="timeline-item">
+            <div class="content">
+                <h3>📘 Diploma in English</h3>
+                <p>Successfully Completed English Diploma</p>
+            </div>
         </div>
 
-        <div class="edu-card">
-            <h3>💻 HND in Software Engineering</h3>
-            <p>Currently Following Higher National Diploma</p>
+        <div class="timeline-item">
+            <div class="content">
+                <h3>💻 HND in Software Engineering</h3>
+                <p>Currently Following Higher National Diploma</p>
+            </div>
         </div>
     </div>
 </section>
