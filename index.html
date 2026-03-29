@@ -265,6 +265,217 @@
          }
      }
 
+     /* MAIN SECTION */
+
+     html {
+         scroll-behavior: smooth;
+     }
+     .about {
+         position: relative;
+         height: 100vh;
+         overflow: hidden;
+     }
+
+     /* BACKGROUND IMAGE */
+     .about-bg {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         background: url('assets/myphoto2.jpeg') center/cover no-repeat;
+         z-index: 1;
+     }
+
+     /* OVERLAY (purple + fade) */
+     .about::before {
+         content: "";
+         position: absolute;
+         width: 100%;
+         height: 100%;
+
+         background: linear-gradient(
+                 to bottom,
+                 rgba(20, 0, 40, 0.9) 0%,
+                 rgba(20, 0, 40, 0.6) 30%,
+                 rgba(20, 0, 40, 0.6) 70%,
+                 rgba(20, 0, 40, 0.9) 100%
+         );
+
+         z-index: 2;
+     }
+
+     /* STRIPES EFFECT */
+     .about::after {
+         content: "";
+         position: absolute;
+         width: 100%;
+         height: 100%;
+
+         background: repeating-linear-gradient(
+                 90deg,
+                 rgba(255,255,255,0.03) 0px,
+                 rgba(255,255,255,0.03) 20px,
+                 transparent 20px,
+                 transparent 40px
+         );
+
+         z-index: 3;
+     }
+
+     /* CONTENT */
+     .about-content {
+         position: relative;
+         z-index: 4;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         height: 100%;
+         padding: 0 80px;
+     }
+
+     /* LEFT IMAGE */
+     .about-left img {
+         width: 250px;
+         height: 250px;
+         border-radius: 50%;
+         border: 6px solid rgba(255,255,255,0.2);
+     }
+
+     /* RIGHT TEXT */
+     .about-right {
+         max-width: 500px;
+     }
+
+     .about-right h2 {
+         color: mediumslateblue;
+         margin-bottom: 20px;
+     }
+
+     .about-right p {
+         color: #ddd;
+         line-height: 1.6;
+         margin-bottom: 20px;
+     }
+
+     .about-right button {
+         padding: 12px 25px;
+         border-radius: 25px;
+         border: none;
+         background: #fff;
+         cursor: pointer;
+     }
+
+     /* STATS */
+     .about-stats {
+         position: absolute;
+         bottom: 40px;
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         padding: 0 100px;
+         z-index: 4;
+     }
+
+     .about-stats h1 {
+         font-size: 60px;
+         color: rgba(255,255,255,0.8);
+     }
+
+     .about-stats span {
+         color: mediumslateblue;
+     }
+
+     /* ABOUT SECTION */
+     .about-section {
+         padding: 80px 50px;
+         background: rgba(255,255,255,0.05); /* 👈 light overlay */
+         backdrop-filter: blur(20px);
+         border-radius: 30px;
+         margin: 50px;
+     }
+
+     /* container */
+     .about-container {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 50px;
+     }
+
+     /* image */
+
+
+         .about-img img {
+             margin-top: -30px;
+             width: 260px;
+             border-radius: 50%;
+             border: 6px solid rgba(255, 255, 255, 0.2);
+         }
+
+         /* text */
+
+
+         .about-text h2 {
+             color: mediumslateblue;
+             margin-bottom: 20px;
+         }
+
+         .about-text p {
+             color: #ccc;
+             line-height: 1.7;
+             margin-bottom: 20px;
+         }
+
+         /* button */
+
+         .cv-btn {
+             padding: 12px 25px;
+             border-radius: 25px;
+             border: none;
+             background: #fff;
+             color: #000;
+             cursor: pointer;
+         }
+
+         /* stats */
+
+         .about-stats {
+             display: flex;
+             justify-content: space-between;
+             margin-top: 50px;
+             gap: 30px;
+         }
+
+         /* stat box */
+
+         .stat-box {
+
+             flex: 1;
+             background: rgba(255, 255, 255, 0.08);
+             padding: 40px;
+             border-radius: 20px;
+             text-align: center;
+             backdrop-filter: blur(10px);
+
+         }
+     .stat-box:hover {
+         transform: translateY(-5px);
+         transition: 0.3s;
+     }
+
+
+         .stat-box h3 {
+             font-size: 40px;
+         }
+
+         .stat-box span {
+             color: mediumslateblue;
+         }
+
+         .stat-box p {
+             color: #ccc;
+         }
+
+
  </style>
 
 </head>
@@ -323,19 +534,18 @@
 
 <!-- About Section -->
 
-<section id="about" class="about">
+<section id="about" class="about-section">
 
-    <!-- BACKGROUND IMAGE -->
-    <div class="about-bg"></div>
+    <div class="about-container">
 
-    <!-- CONTENT -->
-    <div class="about-content">
-
-        <div class="about-left">
-            <img src="assets/myphoto2.jpeg" alt="">
+        <!-- LEFT IMAGE -->
+        <div class="about-img">
+            <img src="assets/myphoto2.jpeg" alt="about image">
         </div>
 
-        <div class="about-right">
+        <!-- RIGHT CONTENT -->
+        <div class="about-text">
+
             <h2>ABOUT ME</h2>
 
             <p>
@@ -344,18 +554,27 @@
                 High-Quality Software That Makes A Difference.
             </p>
 
-            <button>Download CV ⬇</button>
+            <button class="cv-btn">Download CV ⬇️</button>
+
         </div>
 
     </div>
 
     <!-- STATS -->
     <div class="about-stats">
-        <h1>02<span>+</span></h1>
-        <h1>100<span>%</span></h1>
+
+        <div class="stat-box">
+            <h3>02<span>+</span></h3>
+            <p>Projects Completed</p>
+        </div>
+
+        <div class="stat-box">
+            <h3>100<span>%</span></h3>
+            <p>Clients Satisfaction</p>
+        </div>
+
     </div>
 
 </section>
-
 </body>
 </html>
