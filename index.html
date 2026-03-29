@@ -594,6 +594,8 @@
 
      }
 
+     /* Education Section */
+
      .education {
          text-align: center;
          padding: 60px 20px;
@@ -669,6 +671,55 @@
 
      .timeline-item:nth-child(even)::before {
          left: -8px;
+     }
+     /*  TAblet Mode  */
+
+     @media (max-width: 992px) {
+
+         .timeline::before {
+             left: 20px;
+         }
+
+         .timeline-item {
+             width: 100%;
+             padding-left: 50px;
+             padding-right: 20px;
+             text-align: left;
+             left: 0 !important;
+         }
+
+         .timeline-item::before {
+             left: 12px;
+         }
+     }
+
+     /* Mobile Mode*/
+
+     @media (max-width: 768px) {
+
+         .education {
+             padding: 40px 15px;
+         }
+
+         .content {
+             padding: 15px;
+         }
+
+         .content h3 {
+             font-size: 16px;
+         }
+
+         .content p {
+             font-size: 13px;
+         }
+
+         .timeline-item {
+             padding-left: 45px;
+         }
+
+         .timeline::before {
+             width: 3px;
+         }
      }
 
      /* Services Section */
