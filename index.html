@@ -325,7 +325,7 @@
          cursor: pointer;
      }
 
-     /* STATS */
+     /* Stats */
      .about-stats {
          position: absolute;
          bottom: 40px;
@@ -346,7 +346,6 @@
      }
 
      /* TOP BAR */
-
 
      .top-bar {
          display: flex;
@@ -376,7 +375,7 @@
          white-space: nowrap;
      }
 
-     /* TABLET  MODE */
+     /* Tablet  Mode */
 
      @media (max-width: 992px) {
          .top-bar {
@@ -389,7 +388,7 @@
          }
      }
 
-     /* MOBILE MODE */
+     /* Mobile Mode */
 
      @media (max-width: 768px) {
          .top-bar {
@@ -406,7 +405,7 @@
      /* ABOUT SECTION */
      .about-section {
          padding: 80px 50px;
-         background: rgba(255,255,255,0.05); /* 👈 light overlay */
+         background: rgba(255,255,255,0.05);
          backdrop-filter: blur(20px);
          border-radius: 30px;
          margin: 50px;
@@ -672,7 +671,7 @@
      .timeline-item:nth-child(even)::before {
          left: -8px;
      }
-     /*  TAblet Mode  */
+     /*  Tablet Mode  */
 
      @media (max-width: 992px) {
 
@@ -722,7 +721,54 @@
          }
      }
 
-     /* Services Section */
+     /* TECH STACK SECTION */
+
+     /* Section */
+     .tech {
+         text-align: center;
+         padding: 80px 50px;
+         background: rgba(255,255,255,0.05);
+         backdrop-filter: blur(20px);
+         border-radius: 30px;
+         margin: 50px;
+         color: #fff;
+     }
+
+     /* Grid */
+     .tech-container {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+         gap: 25px;
+         max-width: 900px;
+         margin: auto;
+     }
+
+     /* Card */
+     .tech-card {
+         padding: 25px 15px;
+         border-radius: 15px;
+         text-align: center;
+         font-size: 16px;
+         cursor: pointer;
+
+         background: rgba(255, 255, 255, 0.08);
+         border: 2px solid transparent;
+
+         transition: 0.3s;
+     }
+
+     /* Hover Effect  */
+     .tech-card:hover {
+         transform: translateY(-8px);
+
+         border: 2px solid #00e0ff;
+
+         box-shadow:
+                 0 0 10px #00e0ff,
+                 0 0 20px #00e0ff,
+                 0 0 40px rgba(0, 224, 255, 0.5);
+     }
+     /* SERVICES SECTION */
 
      html {
          scroll-behavior: smooth;
@@ -954,6 +1000,7 @@
     </div>
 </section>
 
+<!-- Tech Stack Section -->
 <section class="tech" id="tech">
     <p class="sub-title">TECH STACK</p>
     <h2 class="main-title">Technologies I Use</h2>
