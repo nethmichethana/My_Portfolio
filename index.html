@@ -612,6 +612,28 @@
          margin-bottom: 40px;
      }
 
+     /* Card Layout */
+     .card-container {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 30px;
+
+         max-width: 1000px;
+         margin: auto;
+     }
+
+     /* Cards */
+     .card {
+         background: rgba(255, 255, 255, 0.08);
+         padding: 25px;
+         border-radius: 20px;
+         text-align: left;
+
+         backdrop-filter: blur(10px);
+         transition: 0.3s ease;
+     }
+
+
 
 
  </style>
