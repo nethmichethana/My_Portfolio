@@ -946,6 +946,7 @@
      .project-content {
          padding: 20px;
          position: relative;
+         color: cornflowerblue;
      }
 
      .project-content h3 {
@@ -998,6 +999,79 @@
          scroll-behavior: smooth;
      }
 
+     /* CONTACT ME SECTION */
+
+     .connect-section {
+         text-align: center;
+         padding: 100px 20px;
+     /*    background: linear-gradient(180deg, #0f0c29, #1a1640);*/
+     /*    color: white;*/
+     }
+
+     .connect-section h1 {
+         font-size: 48px;
+         font-weight: 600;
+         line-height: 1.4;
+     }
+
+     .badge {
+         display: inline-block;
+         padding: 8px 18px;
+         background: rgba(255,255,255,0.1);
+         border-radius: 30px;
+         margin-bottom: 30px;
+         font-size: 14px;
+     }
+
+     /* CTA AREA */
+     .cta-area {
+         margin-top: 40px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 20px;
+         flex-wrap: wrap;
+     }
+
+     /* BUTTON */
+     .hire-btn {
+         text-align: center;
+         padding: 15px 35px;
+         border-radius: 30px;
+         border: none;
+         background: white;
+         color: black;
+         font-weight: bold;
+         cursor: pointer;
+         transition: 0.3s;
+     }
+
+     .hire-btn:hover {
+         transform: scale(1.1);
+     }
+
+     /* SOCIAL ICONS */
+     .social-icons a {
+
+         display: inline-flex;
+         justify-content: center;
+         align-items: center;
+         width: 45px;
+         height: 45px;
+         margin: 0 5px;
+         border-radius: 50%;
+         color: white;
+         background: rgba(255,255,255,0.1);
+         font-size: 18px;
+         transition: 0.4s;
+     }
+
+     /* HOVER EFFECT (Blue Shine + Popup) */
+     .social-icons a:hover {
+         background: #00aaff;
+         box-shadow: 0 0 15px #00aaff, 0 0 30px #00aaff;
+         transform: translateY(-6px) scale(1.15);
+     }
  </style>
 
 </head>
@@ -1021,7 +1095,9 @@
         <a href="#projects">Projects</a>
     </div>
 
-    <a href="#" class="hire-btn">HIRE ME</a>
+
+    <a href="mailto:nethmichethana656@gmail.com?subject=Hiring Inquiry&body=Hello, I want to hire you." class="hire-btn">HIRE ME</a>
+
 </div>
 
 
@@ -1203,47 +1279,79 @@
 
     <div class="projects-container">
 
-        <div class="project-card">
-            <img src="assets/connectfourgameimg.avif" alt="Connect Four">
-            <div class="project-content">
-                <h3>Connect Four Game</h3>
-                <div class="arrow">↗</div>
+        <a href="https://github.com/nethmichethana/Connect-four-Game" >
+            <div class="project-card">
+                <img src="assets/connectfourgameimg.avif" alt="Connect Four">
+                <div class="project-content">
+                    <h3>Connect Four Game</h3>
+                    <div class="arrow">↗</div>
+                </div>
             </div>
-        </div>
+        </a>
 
-        <div class="project-card">
-            <img src="assets/restaurantimg.jpg" alt="Restaurant System">
-            <div class="project-content">
-                <h3>Restaurant  System</h3>
-                <div class="arrow">↗</div>
+        <a href="https://github.com/nethmichethana/Restaurant_System_1st_semester"  >
+            <div class="project-card">
+                <img src="assets/restoimg3.jpg" alt="Restaurant System">
+                <div class="project-content">
+                    <h3>Restaurant  System</h3>
+                    <div class="arrow">↗</div>
+                </div>
             </div>
-        </div>
+        </a>
+
+        <a href="https://github.com/nethmichethana/Restaurant_System_1st_semester-master"  >
+            <div class="project-card">
+                <img src="assets/rstoimg2.jpg" alt="Restaurant System">
+                <div class="project-content">
+                    <h3>Restaurant System 2</h3>
+                    <div class="arrow">↗</div>
+                </div>
+            </div>
+        </a>
+
     </div>
 </section>
 
-<!-- Hire Me Section -->
+<!-- Connect  Section -->
+<section class="connect-section">
 
-<section class="cta-section">
     <div class="badge">✨ Available For Opportunities</div>
 
     <h1 class="animated-text">
-        <span>Let’s Work Together</span>
-        <span>to transform your</span>
-        <span>ideas into stunning</span>
-        <span>designs.</span>
+        <span>L</span><span>e</span><span>t</span><span>’</span><span>s</span>
+        <span> </span>
+        <span>W</span><span>o</span><span>r</span><span>k</span>
+        <span> </span>
+        <span>T</span><span>o</span><span>g</span><span>e</span><span>t</span><span>h</span><span>e</span><span>r</span>
+        <br>
+        <span>t</span><span>o</span>
+        <span> </span>
+        <span>t</span><span>r</span><span>a</span><span>n</span><span>s</span><span>f</span><span>o</span><span>r</span><span>m</span>
+        <br>
+        <span>y</span><span>o</span><span>u</span><span>r</span>
+        <span> </span>
+        <span>i</span><span>d</span><span>e</span><span>a</span><span>s</span>
+        <span> </span>
+        <span>i</span><span>n</span><span>t</span><span>o</span>
+        <br>
+        <span>s</span><span>t</span><span>u</span><span>n</span><span>n</span><span>i</span><span>n</span><span>g</span>
+        <span> </span>
+        <span>d</span><span>e</span><span>s</span><span>i</span><span>g</span><span>n</span><span>s</span>.
     </h1>
 
-    <button class="hire-btn">Hire Me Now</button>
+    <div class="cta-area">
+        <button class="hire-btn">Hire Me Now</button>
 
-    <div class="socials">
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
     </div>
+
 </section>
 
-<!-- Font Awesome -->
-<script src="assets/lib/fontawesome/fontawesome-free/js"></script>
-
+<!-- ✅ FIXED Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </body>
 </html>
