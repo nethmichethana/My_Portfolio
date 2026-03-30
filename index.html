@@ -1004,16 +1004,10 @@
      .connect-section {
          text-align: center;
          padding: 100px 20px;
-     /*    background: linear-gradient(180deg, #0f0c29, #1a1640);*/
-     /*    color: white;*/
+         color: white;
      }
 
-     .connect-section h1 {
-         font-size: 48px;
-         font-weight: 600;
-         line-height: 1.4;
-     }
-
+     /* Badge */
      .badge {
          display: inline-block;
          padding: 8px 18px;
@@ -1023,20 +1017,36 @@
          font-size: 14px;
      }
 
+     .highlight {
+         background: linear-gradient(90deg, #00e0ff, #8a6cff);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         text-shadow:
+                 0 0 10px #00e0ff,
+                 0 0 20px #00e0ff;
+     }
+
+     /* TEXT */
+     .connect-section h1 {
+         font-size: 48px;
+         font-weight: 600;
+         line-height: 1.4;
+     }
+
+
      /* CTA AREA */
      .cta-area {
          margin-top: 40px;
          display: flex;
+         flex-direction: column; /* 🔥 IMPORTANT */
          align-items: center;
-         justify-content: center;
          gap: 20px;
-         flex-wrap: wrap;
+
      }
 
-     /* BUTTON */
+     /* BUTTON CENTER */
      .hire-btn {
-         text-align: center;
-         padding: 15px 35px;
+         padding: 15px 40px;
          border-radius: 30px;
          border: none;
          background: white;
@@ -1048,17 +1058,22 @@
 
      .hire-btn:hover {
          transform: scale(1.1);
+         background-color: cornflowerblue;
      }
 
-     /* SOCIAL ICONS */
-     .social-icons a {
+     /* SOCIAL ICONS BELOW */
+     .social-icons {
+         display: flex;
+         gap: 15px;
+     }
 
-         display: inline-flex;
+     /* ICON STYLE */
+     .social-icons a {
+         display: flex;
          justify-content: center;
          align-items: center;
          width: 45px;
          height: 45px;
-         margin: 0 5px;
          border-radius: 50%;
          color: white;
          background: rgba(255,255,255,0.1);
@@ -1066,7 +1081,7 @@
          transition: 0.4s;
      }
 
-     /* HOVER EFFECT (Blue Shine + Popup) */
+     /* HOVER */
      .social-icons a:hover {
          background: #00aaff;
          box-shadow: 0 0 15px #00aaff, 0 0 30px #00aaff;
@@ -1318,34 +1333,20 @@
     <div class="badge">✨ Available For Opportunities</div>
 
     <h1 class="animated-text">
-        <span>L</span><span>e</span><span>t</span><span>’</span><span>s</span>
-        <span> </span>
-        <span>W</span><span>o</span><span>r</span><span>k</span>
-        <span> </span>
-        <span>T</span><span>o</span><span>g</span><span>e</span><span>t</span><span>h</span><span>e</span><span>r</span>
-        <br>
-        <span>t</span><span>o</span>
-        <span> </span>
-        <span>t</span><span>r</span><span>a</span><span>n</span><span>s</span><span>f</span><span>o</span><span>r</span><span>m</span>
-        <br>
-        <span>y</span><span>o</span><span>u</span><span>r</span>
-        <span> </span>
-        <span>i</span><span>d</span><span>e</span><span>a</span><span>s</span>
-        <span> </span>
-        <span>i</span><span>n</span><span>t</span><span>o</span>
-        <br>
-        <span>s</span><span>t</span><span>u</span><span>n</span><span>n</span><span>i</span><span>n</span><span>g</span>
-        <span> </span>
-        <span>d</span><span>e</span><span>s</span><span>i</span><span>g</span><span>n</span><span>s</span>.
+        <div class="highlight">Let’s Work Together</div>
+        <div class="highlight">to transform your</div>
+        <div class="highlight">ideas into stunning</div>
+        <div class="highlight">designs.</div>
     </h1>
 
+
     <div class="cta-area">
-        <button class="hire-btn">Hire Me Now</button>
+        <a href="mailto:nethmichethana656@gmail.com?subject=Hiring Inquiry&body=Hello, I want to hire you." class="hire-btn">Hire Me Now</a>
 
         <div class="social-icons">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/nethmi-chethana-159022292/"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/nethmichethana"><i class="fab fa-github"></i></a>
+            <a href="https://web.facebook.com/profile.php?id=61578991049657"><i class="fab fa-facebook-f"></i></a>
         </div>
     </div>
 
