@@ -156,6 +156,8 @@ body {
     align-items: center;
 
     animation: float 3s ease-in-out infinite;
+    box-shadow: 0 0 15px dodgerblue, 0 0 30px #00aaff;
+    transform: translateY(-6px) scale(1.15);
 }
 
 /* Image */
