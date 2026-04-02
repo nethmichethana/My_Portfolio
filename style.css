@@ -118,7 +118,8 @@ body {
 }
 .buttons {
     display: flex;
-    gap: 15px;
+    /*padding-left: 80px;*/
+    /*gap: 15px;*/
 }
 
 .btn {
