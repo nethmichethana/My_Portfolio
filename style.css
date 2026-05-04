@@ -1049,6 +1049,29 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ASSIGNMENT SECTION */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.assignment {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.sub-title {
+    color: #8a6cff;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.main-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+
 /* PHOTO HUB SECTION */
 
 html {
