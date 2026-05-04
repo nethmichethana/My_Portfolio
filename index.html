@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/lib/normalize.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
 
 </head>
@@ -277,21 +278,51 @@
 <section id="assignment" class="assignment">
     <p class="sub-title">Assignment</p>
     <h2 class="main-title">I Did</h2>
-    <div class="assignment-card">
 
-        <h3 class="assignment-title">Assignment 1</h3>
+    <div class="assignment-section">
 
-        <div class="case-list">
+        <div class="card">
+            <div class="card-bg"></div>
+
+            <div class="card-content">
+                <h2>Assignment</h2>
+                <p>View my works & cases</p>
+
+                <button onclick="openModal()">View</button>
+            </div>
+        </div>
+
+    </div>
+
+<!-- Modal / Cases Section -->
+<div id="modal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <h2>Assignment Cases</h2>
+
+        <div class="cases">
+
             <a href="Assignments/Case1/index.html">Case 1</a>
             <a href="Assignments/Case2/index.html">Case 2</a>
             <a href="Assignments/Case3/index.html">Case 3</a>
             <a href="Assignments/Case4/index.html">Case 4</a>
             <a href="Assignments/Case5/index.html">Case 5</a>
             <a href="Assignments/Case6/index.html">Case 6</a>
+
         </div>
 
     </div>
+
+</div>
+
 </section>
+
+
+
+
 <!-- Photo Hub section -->
 
 <section id="photo-hub" class="photo-hub">
@@ -428,6 +459,25 @@
             track.style.transform = `translateX(-${index * cardWidth}px)`;
         }
     });
+
+
+
+    function openModal(){
+        document.getElementById("modal").style.display = "flex";
+    }
+
+    function closeModal(){
+        document.getElementById("modal").style.display = "none";
+    }
+
+    // click outside close
+    window.onclick = function(event){
+        let modal = document.getElementById("modal");
+        if(event.target === modal){
+            modal.style.display = "none";
+        }
+    }
+
 
 </script>
 
