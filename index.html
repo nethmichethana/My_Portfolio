@@ -18,58 +18,79 @@
 
 <body>
 
-<!-- Hero section -->
+<nav class="navbar" id="navbar">
+    <div class="nav-inner">
+        <div class="nav-logo">
 
-
-<!-- NAVBAR -->
-<div class="navbar">
-
-
-    <!-- HIDDEN CHECKBOX -->
-    <input type="checkbox" id="menu-toggle">
-
-    <!-- HAMBURGER -->
-    <label for="menu-toggle" class="menu-icon">☰</label>
-
-
-    <div class="nav-links">
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#services">SERVICES</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#photo-hub" >PHOTO HUB</a>
-        <a href="#assignment" >ASSIGNMENTS</a>
-
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#home"       class="nav-link active">Home</a>
+            <a href="#about"      class="nav-link">About</a>
+            <a href="#services"   class="nav-link">Services</a>
+            <a href="#projects"   class="nav-link">Projects</a>
+            <a href="#photo-hub"  class="nav-link">Photo Hub</a>
+            <a href="#assignment" class="nav-link">Assignments</a>
+        </div>
+        <a href="#contact" class="nav-cta">Hire Me ✦</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </div>
-</div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home"       class="mobile-link">Home</a>
+        <a href="#about"      class="mobile-link">About</a>
+        <a href="#services"   class="mobile-link">Services</a>
+        <a href="#projects"   class="mobile-link">Projects</a>
+        <a href="#photo-hub"  class="mobile-link">Photo Hub</a>
+        <a href="#assignment" class="mobile-link">Assignments</a>
+        <a href="#contact"    class="mobile-cta">Hire Me ✦</a>
+    </div>
+</nav>
 
-<!-- HERO -->
 <section id="home" class="hero">
-
-    <!-- BG ICONS -->
     <div class="bg-icons">
-        <i class="fab fa-html5"></i>
-        <i class="fab fa-css3-alt"></i>
-        <i class="fab fa-js"></i>
-        <i class="fab fa-java"></i>
-        <i class="fab fa-python"></i>
-        <i class="fab fa-react"></i>
-        <i class="fab fa-node"></i>
-        <i class="fab fa-github"></i>
+        <i class="fab fa-html5"    style="--x:6%;  --y:12%; --dur:7s;  --sz:54px; --dl:0s"></i>
+        <i class="fab fa-css3-alt" style="--x:87%; --y:18%; --dur:9s;  --sz:46px; --dl:1s"></i>
+        <i class="fab fa-js"       style="--x:14%; --y:72%; --dur:8s;  --sz:50px; --dl:2s"></i>
+        <i class="fab fa-java"     style="--x:76%; --y:75%; --dur:10s; --sz:48px; --dl:.5s"></i>
+        <i class="fab fa-python"   style="--x:44%; --y:8%;  --dur:11s; --sz:44px; --dl:1.5s"></i>
+        <i class="fab fa-react"    style="--x:62%; --y:55%; --dur:6.5s;--sz:58px; --dl:3s"></i>
+        <i class="fab fa-node"     style="--x:28%; --y:85%; --dur:8.5s;--sz:46px; --dl:2.5s"></i>
+        <i class="fab fa-github"   style="--x:91%; --y:48%; --dur:7.5s;--sz:42px; --dl:.8s"></i>
+        <i class="fab fa-git-alt"  style="--x:4%;  --y:48%; --dur:12s; --sz:38px; --dl:3.5s"></i>
+        <i class="fas fa-database" style="--x:50%; --y:82%; --dur:7s;  --sz:36px; --dl:4s"></i>
     </div>
+
+    <div class="hero-grid"></div>
 
     <div class="hero-content">
+        <div class="hero-badge">
+            <span class="badge-dot"></span> Available for work
+        </div>
         <h2 class="typing1"></h2>
-        <h1 class="name">Chethana Ekanayaka</h1>
-        <p class="typing2"></p>
+        <h1 class="hero-name">
+            Chethana<br>
+            <span class="name-highlight">Ekanayaka</span>
+        </h1>
+        <p class="typing2-wrap">
+            <span class="typing2"></span>
+            <span class="cursor-blink">|</span>
+        </p>
+        <div class="hero-btns">
+            <a href="#contact"  class="btn-hero-primary">Contact Me <span class="arr">→</span></a>
+            <a href="#projects" class="btn-hero-outline">View Projects</a>
+        </div>
 
-        <a href="#contact" class="btn">Contact Me</a>
     </div>
+
 
 </section>
 
-<!-- Font Awesome -->
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 <div class="top-bar">
     <div class="item">
         ✦ <span>Web Design</span>
@@ -488,25 +509,60 @@
 </section>
 
 <script>
-    const text1 = "Hey, I'm";
-    const text2 = "Software Developer | HR Assistant | Business Analyst";
+    // ── Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 30);
+    });
 
-    let i = 0;
-    let j = 0;
+    // ── Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(l => l.classList.remove('active'));
+                const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+                if (active) active.classList.add('active');
+            }
+        });
+    }, { threshold: 0.45 });
+    sections.forEach(s => observer.observe(s));
 
-    function typeLoop1(){
-        if(i < text1.length){
-            document.querySelector(".typing1").innerHTML += text1.charAt(i);
-            i++;
-            setTimeout(typeLoop1, 80);
-        }else{
-            setTimeout(()=>{
-                document.querySelector(".typing1").innerHTML = "";
-                i = 0;
-                typeLoop1();
-            },2000);
+    // ── Hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
+    });
+    document.querySelectorAll('.mobile-link, .mobile-cta').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            mobileMenu.classList.remove('open');
+        });
+    });
+
+    // ── Typing animations
+    function typeWriter(selector, text, speed, pause) {
+        let i = 0;
+        const el = document.querySelector(selector);
+        function type() {
+            if (i < text.length) {
+                el.textContent += text.charAt(i++);
+                setTimeout(type, speed);
+            } else {
+                setTimeout(() => { el.textContent = ''; i = 0; type(); }, pause);
+            }
         }
+        type();
     }
+    typeWriter('.typing1', "Hey, I'm 👋", 80, 2500);
+    typeWriter('.typing2', "Software Developer | HR Assistant | Business Analyst", 45, 2500);
+
+
+
+
 
     function typeLoop2(){
         if(j < text2.length){
@@ -522,7 +578,7 @@
         }
     }
 
-    typeLoop1();
+
     typeLoop2();
 
 
